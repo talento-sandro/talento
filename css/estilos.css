@@ -1,0 +1,115 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    /* border: green solid 5px; */
+
+
+}
+
+.uno, .dos, .tres, .cuatro, .cinco, .seis, .siete, .ocho, .nueve, .diez{
+    border: solid orange 1px;
+    background-color: darkgrey;
+    height: 50px;
+    width: 100%;
+    order: 10;
+    box-sizing: border-box;
+}
+
+.uno, .dos{
+    width: 50%;
+    
+}
+
+.dos{
+    order: 1;
+    
+}
+.uno{
+    order: 2;
+    align-self: flex-end;
+    justify-self: self-start;
+}
+.cuatro{order: 3;}
+.ocho{order: 4;}
+.oculto_cinco{
+    order: 5;
+    width: 50%;
+}
+
+.cinco{
+    order: 6;
+    width: 50%;
+}
+
+.seis{
+    order: 7;
+    width: 50%;
+}
+
+.siete{order: 8;}
+
+.oculto_tres{
+    order: 9;
+    width: 50%;
+}
+
+.tres{
+    order: 10;
+    width: 50%;
+}
+
+.nueve{width: 50%;}
+
+
+
+
+@media (min-width:390px) and (max-width:660px){
+    .cuatro{
+        order: 1;
+    }
+    .uno, .dos{
+        order: 2;
+    }
+    .cinco, .ocho{
+        order: 3;
+        width: 50%;
+    }
+    .siete{
+        order: 4;
+    }
+    .nueve{
+        order: 5;
+        width: 100%;
+    }
+    .tres{
+        order: 6;
+        width: 100%;
+    }
+    .seis, .oculto_tres, .oculto_cinco{
+        display: none;
+    }
+    .oculto_diez{
+        order: 7;
+        width: 33%;
+    }
+    .diez{
+        order: 8;
+        width: 33%;
+                
+    }
+}
+
+
+@media (min-width:661px){
+.uno, .dos, .cuatro, .cinco, .seis, .siete, .nueve{
+    display: none;
+}
+.tres{
+    height: 200px;
+    width: 100%;
+}
+.diez{
+    height: 150px;
+}
+}
